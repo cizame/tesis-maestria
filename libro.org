@@ -56,4 +56,4 @@ truth probably involves some of the three alternatives.
 *** 
     Tenemos que:
 
-    - Si 
+    - Si \(f(n)=O(g(n))\) y \(h(n)=O(g(n))\), entonces \(f(n)+h(n)\in O(h(n))\).
