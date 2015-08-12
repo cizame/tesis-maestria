@@ -1,0 +1,59 @@
+#+title: Introducción
+#+author:
+#+date: 
+#+language: es
+
+#+options: H:2
+
+* Algoritmos de ordenamiento
+
+** Cita de Knuth 
+   
+#+BEGIN_QUOTE
+Computer manufacturers estimate that over 25 percent of the running
+time on their computers is currently being spent on sorting, when all
+their customers are taken into account. There are many installations
+in which sorting uses over half of the computing time. From these
+statistics we may conclude either that *(i)* there are many important
+applications of sorting, or *(ii)* many people sort when they shouldn't,
+or *(iii)* inneficient sorting algorithms are in common use. The real
+truth probably involves some of the three alternatives.
+#+END_QUOTE   
+
+** Características de un buen algoritmo 
+
+   - Debe estar descrito en términos claros, de modo que pueda convertirse
+     en un programa para una computadora.
+   - Debe tener una condición inicial.
+   - Debe finalizar después de una cantidad finita de pasos.
+   - Debe finalizar con la respuesta correcta.
+   - ¿Es rápido?
+
+
+* La notación O
+
+** Definición
+
+*** Notación O
+
+    Decimos que \(f(n)=O(g(n))\) si existen \(M,n_{0}\) tales que
+    \(|f(n)|\leq Mg(n)\) para \(n\geq n_{0}\).
+
+*** Ejemplo
+
+    Sea \(P(n)=a_{0}+a_{1}n+\cdots+a_{m}n^{m}\) un polinomio de grado
+    cuando mucho \(m\). Entonces \(P(n)=O(n^{m})\). Pues:
+    \begin{align*}
+    |P(n)| & \leq |a_0|+|a_1|n+\cdots+|a_m|n^m \\
+           & = \left(\frac{|a_0|}{n^m}+\frac{|a_1|}{n^{m-1}}+\cdots+\frac{|a_{m-1}|}{n}+|a_m|\right)n^m\\
+	   & \leq (|a_0|+|a_1|+\cdots+|a_m|)n^m,
+    \end{align*}
+    y entonces si \(n_{0}=1\) y \(M=|a_0|+|a_1|+\cdots+|a_m|\), se
+    tiene que \(|P(n)|\leq Mn^{m}\) para \(n\geq n_{0}\).
+
+** Propiedades
+
+*** 
+    Tenemos que:
+
+    - Si 
