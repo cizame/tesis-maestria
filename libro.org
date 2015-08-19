@@ -29,6 +29,16 @@ truth probably involves some of the three alternatives.
    - Debe finalizar con la respuesta correcta.
    - ¿Es rápido?
 
+** Ordenamiento de una lista
+
+   - Primero encontramos el máximo de una lista de \(n\) elementos en
+     \(n-1\) pasos y demostramos que es óptimo.
+   - Por lo tanto una lista de \(n\) elementos se puede ordenar en
+     \(n(n-1)\) pasos.
+   - Luego vimos el método de ordenamiento como un torneo de
+     eliminación directa y vimos que se puede ordenar en \(n\log n\)
+     pasos.
+
 
 * La notación O
 
@@ -58,3 +68,4 @@ truth probably involves some of the three alternatives.
 
     - Si \(f(n)=O(g(n))\) y \(h(n)=O(g(n))\), entonces \(f(n)+h(n)\in O(g(n))\).
     - Si \(f(n)=O(g(n))\) y \(h(n)\geq 0\), entonces \(f(n)h(n)=O(h(n)g(n))\).
+      
