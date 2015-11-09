@@ -67,7 +67,7 @@
 
 * 
 
-   Como se menciona en [[cite:MR2572804]] "Introduction to Algorithms" tercera edición.
+   Como se menciona en [[cite:MR2572804]]  "Introduction to Algorithms" tercera edición.
 
    ...Antes de que hubiera computadoras, había algoritmos. Pero ahora
    que hay computadoras, incluso hay más algoritmos y estos se
@@ -205,6 +205,7 @@ def ford(G,s,L=None):
 *** Algoritmo de Floyd
 
 #+bibliography: ./referencia plain limit:t
+
 
 * COMMENT Variables locales
 
