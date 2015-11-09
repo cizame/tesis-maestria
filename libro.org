@@ -1,13 +1,113 @@
-#+title: Introducción
+
+#+title: Introducción 
 #+author:
 #+date: 
+
+#+latex_header: \usepackage{xcolor}
+#+latex_header: \usepackage[spanish,mexico]{babel}
+
 #+language: es
 
-#+options: H:2
+#+options: H:4
 
-* Algoritmos de ordenamiento
+* Preliminares
+  Cuando al principio de una conversación escuchamos la frase "El
+  estudio de los algoritmos", muchos de nosotros podríamos suponer que
+  el tema centrar de la charla estará relacionado a una computadora;
+  sin embargo, pese a lo que podríamos suponer, para plantear y
+  estudiar algoritmos no requerimos de ningun aparato, de hecho su
+  existencia es anterio a estos.
 
-** Cita de Knuth 
+** Algoritmos
+
+   La palabra algoritmo tiene su origen en el libro "*Algoritmi de
+   numero Indorum*" de la traducción al latín del libro "Hisab al-yabr
+   wa'l muqabala" del matemático, astrónomo y geógrafo persa-musulman
+   *Abu Abdallah Muhammad ibn Musa al-Jwarizmi* mejor conocido como
+   al-Khwarizmi.
+
+   En dicho libro, el matemático enlista una serie de
+   pasos a seguir para resolver una ecuación de segundo grado, que por
+   supuesto siempre genera la solución correcta. Esta serie de
+   pasos se puede considerar como uno de los primeros algoritmos de la
+   historia. 
+
+   Un *algoritmo* es una serie de pasos finitos, predeterminados y bien
+   definidos a seguir de forma ordenada que permitan, mediante una
+   serie de datos de inicio, obtener uno o mas datos de salida los
+   cuales se interpretan como solución a un problema determinado.
+
+   
+#*** Partes de un algoritmo
+
+   - Entrada: :: Son los datos, proporcionados por el problema planteado,
+   que requiere el siguiente paso para su funcionamiento.
+
+   - Proceso: :: Este es el momento en el que se toman los datos de
+   entrada y se manipulan de acuerdo a los pasos preestablesidos para
+   procesarlos.
+
+   - Salida: :: Resultado final arrojado por el proceso. 
+
+**** Ejemplo: algoritmo para lavarse las manos.
+    
+    - Entrada: Agua, Jabon y Manos.
+    - Proceso:
+      - Moja ambas manos
+      - Pon jabon en una mano
+      - Frota ambas manos 
+      - Enjuaga las manos hasta que no tengan jabon
+    - Salida: Manos limpias y sin jabon
+
+    Algo que podría parecer obvio pero que aún no se ha mencionado es
+    que sin importar el número de veces que se repita un algoritmo, si
+    se tienen los mismos valores en las entradas, entonces éste siempre debe de
+    arrojar el mismo resultado.
+
+
+* 
+
+   Como se menciona en [[cite:MR2572804]] "Introduction to Algorithms" tercera edición.
+
+   ...Antes de que hubiera computadoras, había algoritmos. Pero ahora
+   que hay computadoras, incluso hay más algoritmos y estos se
+   encuentran en el corazón de la informatica...
+
+** La notación O
+
+*** Definición
+
+**** Notación O
+
+     Decimos que \(f(n)=O(g(n))\) si existen \(M,n_{0}\) tales que
+     \(|f(n)|\leq Mg(n)\) para \(n\geq n_{0}\).
+
+**** Ejemplo
+
+     Sea \(P(n)=a_{0}+a_{1}n+\cdots+a_{m}n^{m}\) un polinomio de grado
+     cuando mucho \(m\). Entonces \(P(n)=O(n^{m})\). Pues:
+     \begin{align*}
+     |P(n)| & \leq |a_0|+|a_1|n+\cdots+|a_m|n^m \\
+            & = \left(\frac{|a_0|}{n^m}+\frac{|a_1|}{n^{m-1}}+\cdots+\frac{|a_{m-1}|}{n}+|a_m|\right)n^m\\
+	    & \leq (|a_0|+|a_1|+\cdots+|a_m|)n^m,
+     \end{align*}
+     y entonces si \(n_{0}=1\) y \(M=|a_0|+|a_1|+\cdots+|a_m|\), se
+     tiene que \(|P(n)|\leq Mn^{m}\) para \(n\geq n_{0}\).
+
+*** Propiedades
+
+**** 
+     Tenemos que:
+
+     - Si \(f(n)=O(g(n))\) y \(h(n)=O(g(n))\), entonces \(f(n)+h(n)\in O(g(n))\).
+     - Si \(f(n)=O(g(n))\) y \(h(n)\geq 0\), entonces \(f(n)h(n)=O(h(n)g(n))\).
+
+       
+* Algoritmos
+  
+** Algoritmos de ordenamiento
+
+*** Cita de Knuth 
    
 #+BEGIN_QUOTE
 Computer manufacturers estimate that over 25 percent of the running
@@ -20,52 +120,94 @@ or *(iii)* inneficient sorting algorithms are in common use. The real
 truth probably involves some of the three alternatives.
 #+END_QUOTE   
 
-** Características de un buen algoritmo 
+*** Características de un buen algoritmo 
 
-   - Debe estar descrito en términos claros, de modo que pueda convertirse
-     en un programa para una computadora.
-   - Debe tener una condición inicial.
-   - Debe finalizar después de una cantidad finita de pasos.
-   - Debe finalizar con la respuesta correcta.
-   - ¿Es rápido?
+    - Debe estar descrito en términos claros, de modo que pueda convertirse
+      en un programa para una computadora.
+    - Debe tener una condición inicial.
+    - Debe finalizar después de una cantidad finita de pasos.
+    - Debe finalizar con la respuesta correcta.
+    - ¿Es rápido?
 
-** Ordenamiento de una lista
+*** TODO Ordenamiento de una lista
 
-   - Primero encontramos el máximo de una lista de \(n\) elementos en
-     \(n-1\) pasos y demostramos que es óptimo.
-   - Por lo tanto una lista de \(n\) elementos se puede ordenar en
-     \(n(n-1)\) pasos.
-   - Luego vimos el método de ordenamiento como un torneo de
-     eliminación directa y vimos que se puede ordenar en \(n\log n\)
-     pasos.
+    - Primero encontramos el máximo de una lista de \(n\) elementos en
+      \(n-1\) pasos y demostramos que es óptimo.
+    - Por lo tanto una lista de \(n\) elementos se puede ordenar en
+      \(n(n-1)\) pasos.
+    - Luego vimos el método de ordenamiento como un torneo de
+      eliminación directa y vimos que se puede ordenar en \(n\log n\)
+      pasos.
+** Algoritmos de camino más corto       
+*** Búsqueda en anchura
+#+BEGIN_SRC python
+def bfs(G, s):
+    P, Q = {s: 0}, deque([s]) # Parents and FIFO queue
+    while Q:
+        u = Q.popleft() # Constant-time for deque
+        for v in G.neighbor_out_iterator(u):
+            if v in P: continue # Already has parent
+            P[v] = P[u]+1 # Reached from u: u is parent
+            Q.append(v)
+    return P
+#+END_SRC
 
+*** Algoritmo de Dijkstra
+#+BEGIN_SRC python
+def dijkstra(G,s):
+    L,T,P = {s:0},[(0,s)],set([])
+    while T:
+        _, v = heappop(T)
+        P.add(v)
+        for u in G[v]:
+            if u in L:
+                if L[u] > L[v]+G[v][u]:
+                    L[u] = L[v]+G[v][u]
+            else:
+                if u not in P:
+                    L[u]=L[v]+G[v][u]
+                    heappush(T,(L[u],u))
+    return L
+#+END_SRC
 
-* La notación O
+*** Algoritmo de Ford
+Este algoritmo algo tenía mal
 
-** Definición
+#+BEGIN_SRC python
+def ford(G,s,L=None):
+    V=G.keys()
+    if L==None:
+        L={}
+        for i in V:
+            L[i]=inf
+        L[s]=0
+    there_is=False
+    i=0
+    print L
+    while not(there_is) and i<len(V):
+        u=V[i]
+        j=0
+        A=G[u].keys()
+        while not(there_is) and j<len(A):
+            v = A[j]
+            there_is = L[u] < inf and L[v] > L[u]+G[u][v]
+            j = j+1
+        i = i+1
+    if there_is:
+        L[v]=L[u]+G[u][v]
+        print u,v
+        ford(G,s,L)
+    else:
+        print "Ya"
+        print L
+        return L
+#+END_SRC
+*** Algoritmo de Floyd
 
-*** Notación O
+#+bibliography: ./referencia plain limit:t
 
-    Decimos que \(f(n)=O(g(n))\) si existen \(M,n_{0}\) tales que
-    \(|f(n)|\leq Mg(n)\) para \(n\geq n_{0}\).
+* COMMENT Variables locales
 
-*** Ejemplo
-
-    Sea \(P(n)=a_{0}+a_{1}n+\cdots+a_{m}n^{m}\) un polinomio de grado
-    cuando mucho \(m\). Entonces \(P(n)=O(n^{m})\). Pues:
-    \begin{align*}
-    |P(n)| & \leq |a_0|+|a_1|n+\cdots+|a_m|n^m \\
-           & = \left(\frac{|a_0|}{n^m}+\frac{|a_1|}{n^{m-1}}+\cdots+\frac{|a_{m-1}|}{n}+|a_m|\right)n^m\\
-	   & \leq (|a_0|+|a_1|+\cdots+|a_m|)n^m,
-    \end{align*}
-    y entonces si \(n_{0}=1\) y \(M=|a_0|+|a_1|+\cdots+|a_m|\), se
-    tiene que \(|P(n)|\leq Mn^{m}\) para \(n\geq n_{0}\).
-
-** Propiedades
-
-*** 
-    Tenemos que:
-
-    - Si \(f(n)=O(g(n))\) y \(h(n)=O(g(n))\), entonces \(f(n)+h(n)\in O(g(n))\).
-    - Si \(f(n)=O(g(n))\) y \(h(n)\geq 0\), entonces \(f(n)h(n)=O(h(n)g(n))\).
-      
+# Local Variables:
+# org-latex-pdf-process: ("latexmk -pdf -f %f")
+# End:
