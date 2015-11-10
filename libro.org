@@ -3,7 +3,7 @@
 #+author:
 #+date: 
 
-#+latex_class: tesis
+#+latex_class: mitesis
 
 #+latex_header: \usepackage{xcolor}
 #+latex_header: \usepackage[spanish,mexico]{babel}
@@ -216,7 +216,5 @@ def ford(G,s,L=None):
 * COMMENT Variables locales
 
 # Local Variables:
-# org-latex-pdf-process: ("latexmk -pdf -f %f")
-# org-latex-listings-options: (("basicstyle" "\\ttfamily"))
-# org-latex-default-packages-alist: (("AUTO" "inputenc" t ("pdflatex")) ("T1" "fontenc" t ("pdflatex")) ("" "amsmath" t) ("" "hyperref" nil) ("" "listings" nil))
+# eval: (load-file "opciones.el")
 # End:
