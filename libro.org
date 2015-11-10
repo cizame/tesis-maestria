@@ -62,23 +62,19 @@
   que sin importar el número de veces que se repita un algoritmo, si
   se tienen los mismos valores en las entradas, entonces éste siempre
   debe de arrojar el mismo resultado.
-
-  
-* Algoritmos computacionales 
-
-   Como se menciona en [[cite:MR2572804]].
- 
-   ...Antes de que hubiera computadoras, había algoritmos. Pero ahora
-   que hay computadoras, incluso hay más algoritmos y estos se
-   encuentran en el corazón de la informática...
    
-   Si bien ya mencionamos que un algoritmo no necesita de una
-   computadora para su existencia, en muchos caso, el tener una a la mano
-   es de gran ayuda a la hora de implementarlos pues el tiempo en el
-   que se obtiene la solución es considerablemente menos.  
+** Características de un buen algoritmo 
+
+    - Debe estar descrito en términos claros, de modo que pueda convertirse
+      en un programa para una computadora.
+    - Debe tener una condición inicial.
+    - Debe finalizar después de una cantidad finita de pasos.
+    - Debe finalizar con la respuesta correcta.
+    - ¿Es rápido?
 
 ** La notación O
 
+    
 *** Definición
 
 **** Notación O
@@ -109,6 +105,18 @@
        
 * Algoritmos y su implementación
   
+   Como se menciona en [[cite:MR2572804]]:
+ \begin{center}
+   ...Antes de que hubiera computadoras, había algoritmos. 
+   Pero ahora que hay computadoras, incluso hay más algoritmos y 
+   estos se encuentran en el corazón de la informática...
+ \end{center}  
+
+   Si bien ya mencionamos que un algoritmo no necesita de una
+   computadora para su existencia, en muchos caso, el tener una a la mano
+   es de gran ayuda a la hora de implementarlos pues el tiempo en el
+   que se obtiene la solución es considerablemente menos.  
+
 ** Algoritmos de ordenamiento
 
 *** Cita de Knuth 
@@ -124,14 +132,6 @@ or *(iii)* inneficient sorting algorithms are in common use. The real
 truth probably involves some of the three alternatives.
 #+END_QUOTE   
 
-*** Características de un buen algoritmo 
-
-    - Debe estar descrito en términos claros, de modo que pueda convertirse
-      en un programa para una computadora.
-    - Debe tener una condición inicial.
-    - Debe finalizar después de una cantidad finita de pasos.
-    - Debe finalizar con la respuesta correcta.
-    - ¿Es rápido?
 
 *** TODO Ordenamiento de una lista
 
