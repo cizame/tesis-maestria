@@ -15,10 +15,10 @@
   estudio de los algoritmos", muchos de nosotros podríamos suponer que
   el tema centrar de la charla estará relacionado a una computadora;
   sin embargo, pese a lo que podríamos suponer, para plantear y
-  estudiar algoritmos no requerimos de ningun aparato, de hecho su
-  existencia es anterio a estos.
+  estudiar algoritmos no requerimos de ningún aparato, de hecho su
+  existencia es anterior a estos.
 
-** Algoritmo
+** Algoritmos
 
    La palabra algoritmo tiene su origen en el libro "*Algoritmi de
    numero Indorum*" de la traducción al latín del libro "Hisab al-yabr
@@ -45,32 +45,37 @@
           funcionamiento.
      - Proceso: :: Este es el momento en el que se toman los datos de
           entrada y se manipulan de acuerdo a los pasos
-          preestablesidos para procesarlos.
+          preestablecidos para procesarlos.
      - Salida: :: Resultado final arrojado por el proceso. 
 
   - *Ejemplo*: algoritmo para lavarse las manos.  
     
-     - Entrada: :: Agua, Jabon y Manos.
-     - Proceso: ::
+     - Entrada: :: Agua, Jabón y Manos.
+     - Proceso: :: 
        - Moja ambas manos
-       - Pon jabon en una mano
+       - Pon jabón en una mano
        - Frota ambas manos 
-       - Enjuaga las manos hasta que no tengan jabon
-     - Salida: :: Manos limpias y sin jabon
+       - Enjuaga las manos hasta que no tengan jabón
+     - Salida: :: Manos limpias y sin jabón
 
-    Algo que podría parecer obvio pero que aún no se ha mencionado es
-    que sin importar el número de veces que se repita un algoritmo, si
-    se tienen los mismos valores en las entradas, entonces éste siempre debe de
-    arrojar el mismo resultado.
+  Algo que podría parecer obvio pero que aún no se ha mencionado es
+  que sin importar el número de veces que se repita un algoritmo, si
+  se tienen los mismos valores en las entradas, entonces éste siempre
+  debe de arrojar el mismo resultado.
 
+  
+* Algoritmos computacionales 
 
-* 
-
-   Como se menciona en [[cite:MR2572804]]  "Introduction to Algorithms" tercera edición.
-
+   Como se menciona en [[cite:MR2572804]].
+ 
    ...Antes de que hubiera computadoras, había algoritmos. Pero ahora
    que hay computadoras, incluso hay más algoritmos y estos se
-   encuentran en el corazón de la informatica...
+   encuentran en el corazón de la informática...
+   
+   Si bien ya mencionamos que un algoritmo no necesita de una
+   computadora para su existencia, en muchos caso, el tener una a la mano
+   es de gran ayuda a la hora de implementarlos pues el tiempo en el
+   que se obtiene la solución es considerablemente menos.  
 
 ** La notación O
 
@@ -102,7 +107,7 @@
      - Si \(f(n)=O(g(n))\) y \(h(n)\geq 0\), entonces \(f(n)h(n)=O(h(n)g(n))\).
 
        
-* Algoritmos
+* Algoritmos y su implementación
   
 ** Algoritmos de ordenamiento
 
