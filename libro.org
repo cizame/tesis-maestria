@@ -17,8 +17,8 @@
   estudio de los algoritmos", muchos de nosotros podríamos suponer que
   el tema centrar de la charla estará relacionado a una computadora;
   sin embargo, pese a lo que podríamos suponer, para plantear y
-  estudiar algoritmos no requerimos de ningun aparato, de hecho su
-  existencia es anterio a estos.
+  estudiar algoritmos no requerimos de ningún aparato, de hecho su
+  existencia es anterior a estos.
 
 ** Algoritmos
 
@@ -40,43 +40,43 @@
    cuales se interpretan como solución a un problema determinado.
 
    
-#*** Partes de un algoritmo
+   - *Partes de un algoritmo:*  
 
-   - Entrada: :: Son los datos, proporcionados por el problema planteado,
-   que requiere el siguiente paso para su funcionamiento.
+     - Entrada: :: Son los datos, proporcionados por el problema
+          planteado, que requiere el siguiente paso para su
+          funcionamiento.
+     - Proceso: :: Este es el momento en el que se toman los datos de
+          entrada y se manipulan de acuerdo a los pasos
+          preestablecidos para procesarlos.
+     - Salida: :: Resultado final arrojado por el proceso. 
 
-   - Proceso: :: Este es el momento en el que se toman los datos de
-   entrada y se manipulan de acuerdo a los pasos preestablesidos para
-   procesarlos.
-
-   - Salida: :: Resultado final arrojado por el proceso. 
-
-**** Ejemplo: algoritmo para lavarse las manos.
+  - *Ejemplo*: algoritmo para lavarse las manos.  
     
-    - Entrada: Agua, Jabon y Manos.
-    - Proceso:
-      - Moja ambas manos
-      - Pon jabon en una mano
-      - Frota ambas manos 
-      - Enjuaga las manos hasta que no tengan jabon
-    - Salida: Manos limpias y sin jabon
+     - Entrada: :: Agua, Jabón y Manos.
+     - Proceso: :: 
+       - Moja ambas manos
+       - Pon jabón en una mano
+       - Frota ambas manos 
+       - Enjuaga las manos hasta que no tengan jabón
+     - Salida: :: Manos limpias y sin jabón
 
-    Algo que podría parecer obvio pero que aún no se ha mencionado es
-    que sin importar el número de veces que se repita un algoritmo, si
-    se tienen los mismos valores en las entradas, entonces éste siempre debe de
-    arrojar el mismo resultado.
+  Algo que podría parecer obvio pero que aún no se ha mencionado es
+  que sin importar el número de veces que se repita un algoritmo, si
+  se tienen los mismos valores en las entradas, entonces éste siempre
+  debe de arrojar el mismo resultado.
+   
+** Características de un buen algoritmo 
 
-
-* 
-
-   Como se menciona en [[cite:MR2572804]]  "Introduction to Algorithms" tercera edición.
-
-   ...Antes de que hubiera computadoras, había algoritmos. Pero ahora
-   que hay computadoras, incluso hay más algoritmos y estos se
-   encuentran en el corazón de la informatica...
+    - Debe estar descrito en términos claros, de modo que pueda convertirse
+      en un programa para una máquina.
+    - Debe tener una condición inicial.
+    - Debe finalizar después de una cantidad finita de pasos.
+    - Debe finalizar con la respuesta correcta.
+    - ¿Es rápido?
 
 ** La notación O
 
+    
 *** Definición
 
 **** Notación O
@@ -105,8 +105,20 @@
      - Si \(f(n)=O(g(n))\) y \(h(n)\geq 0\), entonces \(f(n)h(n)=O(h(n)g(n))\).
 
        
-* Algoritmos
+* Algoritmos y su implementación
   
+   Como se menciona en [[cite:MR2572804]]:
+ \begin{center}
+   ...Antes de que hubiera computadoras, había algoritmos. 
+   Pero ahora que hay computadoras, incluso hay más algoritmos y 
+   estos se encuentran en el corazón de la informática...
+ \end{center}  
+
+   Si bien ya mencionamos que un algoritmo no necesita de una
+   computadora para su existencia, en muchos caso, el tener una a la mano
+   es de gran ayuda a la hora de implementarlos pues el tiempo en el
+   que se obtiene la solución es considerablemente menos.  
+
 ** Algoritmos de ordenamiento
 
 *** Cita de Knuth 
@@ -122,14 +134,6 @@ or *(iii)* inneficient sorting algorithms are in common use. The real
 truth probably involves some of the three alternatives.
 #+END_QUOTE   
 
-*** Características de un buen algoritmo 
-
-    - Debe estar descrito en términos claros, de modo que pueda convertirse
-      en un programa para una computadora.
-    - Debe tener una condición inicial.
-    - Debe finalizar después de una cantidad finita de pasos.
-    - Debe finalizar con la respuesta correcta.
-    - ¿Es rápido?
 
 *** TODO Ordenamiento de una lista
 
