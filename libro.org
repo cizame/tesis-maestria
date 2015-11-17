@@ -12,6 +12,10 @@
 
 #+options: H:4 ':t
 
+* Introducción
+  
+
+
 * Preliminares
   Cuando al principio de una conversación escuchamos la frase "El
   estudio de los algoritmos", muchos de nosotros podríamos suponer que
