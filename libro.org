@@ -75,7 +75,18 @@ la gráfica original; existe un vértice asociado a él: en donde los
 vértices $x$ y $y$ son adyacentes si y solo si $x$ es un vértice de la
 gráfica de Cayley y $y$ un triángulo que contenga a $x$ o viceversa.
 
-  
+Siguiendo el procedimiento descrito y ayudados con GAP, un software
+computacional de Álgebra discreta, se reprodujeron relativamente rápido
+las jaulas de Cayley cúbicas de cuello ocho, diez, doce, catorce y
+dieciséis, las cuales durante algunos años proporcionaron cotas
+superiores para las jaulas cúbicas respectivas. Sin embargo para
+localizar una gráfica cúbica de cuello dieciocho por este mismo método
+el algoritmo tardó más de lo esperado.
+
+El objetivo de esta nueva tesis es analizar el algoritmo y presentar
+mejoras de este, que acorten el tiempo de ejecución del mismo con la
+finalidad de utilizarlo en la búsqueda de gráficas cúbicas con cuellos
+mayores.
 
 
 * Preliminares
@@ -171,7 +182,7 @@ gráfica de Cayley y $y$ un triángulo que contenga a $x$ o viceversa.
      - Si \(f(n)=O(g(n))\) y \(h(n)\geq 0\), entonces \(f(n)h(n)=O(h(n)g(n))\).
 
        
-* COMMENT Algoritmos y su implementación
+* Algoritmos y su implementación
   
    Como se menciona en [[cite:MR2572804]]:
  \begin{center}
