@@ -20,7 +20,8 @@ plantear el problema a tratar.
 Una gráfica $G$ es un par ordenado de conjuntos $(V(G),E(G))$, los
 elementos del primer conjunto se llaman \emph{vértices} y los del
 segundo se llaman \emph{aristas}, con la condición de que las aristas
-son parejas no ordenadas de vértices. Dos vértices $v,w$ se dicen \emph{adyacentes} si $\{v,w\}\in E(G)$.
+son parejas no ordenadas de vértices. Dos vértices $v,w$ se dicen
+\emph{adyacentes} si $\{v,w\}\in E(G)$.
 
 Una arista $e$ se dice \emph{incidente} con un vértice $v$ si
 $v\in e$.  El \emph{grado} $\gr v$ de un vértice $v$ es la cantidad de
