@@ -13,9 +13,66 @@
 #+options: H:4 ':t
 
 * Introducción
+
+A continuación se expondrán las definiciones elementales necesarias para
+plantear el problema a tratar.
+
+Una gráfica $G$ es un par ordenado de conjuntos $(V(G),E(G))$, los
+elementos del primer conjunto se llaman \emph{vértices} y los del
+segundo se llaman \emph{aristas}, con la condición de que las aristas
+son parejas no ordenadas de vértices. Dos vértices $v,w$ se dicen \emph{adyacentes} si $\{v,w\}\in E(G)$.
+
+Una arista $e$ se dice \emph{incidente} con un vértice $v$ si
+$v\in e$.  El \emph{grado} $\gr v$ de un vértice $v$ es la cantidad de
+aristas incidentes con $v$. Una gráfica $G$ es \emph{regular} si todos
+los vértices tienen el mismo grado. Si $G$ es una gráfica regular
+donde los vértices tienen grado $k$, decimos que $G$ es
+$k$-regular. Una gráfica 3-regular se llama \emph{cúbica}.
+
+Un \emph{ciclo} de \emph{longitud} $n$ es una sucesión de aristas
+$e_{1},e_{2},\ldots,e_{n}$, todas distintas, tales que $e_{i}$ es
+adyacente a $e_{i+1}$ para $i=1,\ldots,n-1$ y $e_{1}$ adyacente a
+$e_{n}$. Si una gráfica tiene ciclos, el \emph{cuello} de $G$ es la
+menor longitud de un ciclo en $G$.
+
+Si una gráfica es $k$-regular y tiene cuello $g$, decimos que es una
+$(k,g)$-gráfica. Se demuestra en \cite{erdos} que para cada $k\geq2$ y
+$g\geq3$ existe una $(k,g)$-gráfica. Dados valores específicos de $k$
+y $g$, una \emph{$(k,g)$-jaula} es una gráfica $G$ tal que cualquier
+otra $(k,g)$-gráfica tiene al menos tantos vértices como $G$.
+
+A partir de la demostración de que toda $(k,g)$-gráfica existe,
+surgieron dos problemas: dados los parámetros $k$ y $g$, uno
+clasificar todas las $(k,g)$-jaulas salvo isomorfismo, y dos
+determinar la cantidad de vértices que estas tienen.
+
+Uno de los casos más estudiados es cuando $k=3$ y en este caso ya se
+conocen (y se han clasificado) las jaulas hasta cuello $12$; sin
+embargo si $g\geq 13$ solo se tienen cotas superiores e inferiores
+para el número de vértices que estas tienen.
+
+En la tesis de licenciatura \cite{tesis} se estudió el problemas de
+las jaulas cúbicas de cuello par mayor o igual a ocho, presentando un
+método computacional; el cual dibuja gráficas $3$-regulares de cuello
+par, a partir de un listado de grupos; e identifica si alguna iguala o
+reduce la cota superior.
+
+El método que se siguió tiene dos niveles. El primero, construye
+gráficas de Cayley localmente $3K_2$, las cuales son regulares de
+grado seis, con la propiedad de que para todo vértice $x$ de la
+gráfica, si $A$ denota el conjunto formado por sus vértices
+adyacentes, entonces para todo $a\in A$ existe un único $b \in
+A\backslash \{a\}$ tal que $a$ y $b$ son adyacentes, la definición
+formal se encuentra en \cite{tesis}.
+
+El segundo nivel, dibuja la bipartita clánica, asociada a cada una de
+las gráficas de Cayley localmente $3K_2$, construidas en el paso
+anterior. En dicha gráfica, por cada vértice y por cada triángulo de
+la gráfica original; existe un vértice asociado a él: en donde los
+vértices $x$ y $y$ son adyacentes si y solo si $x$ es un vértice de la
+gráfica de Cayley y $y$ un triángulo que contenga a $x$ o viceversa.
+
   
-
-
 * Preliminares
   Cuando al principio de una conversación escuchamos la frase "El
   estudio de los algoritmos", muchos de nosotros podríamos suponer que
