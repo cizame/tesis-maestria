@@ -14,6 +14,8 @@
 
 * Introducción
 
+
+
 A continuación se expondrán las definiciones elementales necesarias para
 plantear el problema a tratar.
 
@@ -37,7 +39,7 @@ $e_{n}$. Si una gráfica tiene ciclos, el \emph{cuello} de $G$ es la
 menor longitud de un ciclo en $G$.
 
 Si una gráfica es $k$-regular y tiene cuello $g$, decimos que es una
-$(k,g)$-gráfica. Se demuestra en \cite{erdos} que para cada $k\geq2$ y
+$(k,g)$-gráfica. Se demuestra en cite:erdos: que para cada $k\geq2$ y
 $g\geq3$ existe una $(k,g)$-gráfica. Dados valores específicos de $k$
 y $g$, una \emph{$(k,g)$-jaula} es una gráfica $G$ tal que cualquier
 otra $(k,g)$-gráfica tiene al menos tantos vértices como $G$.
@@ -48,11 +50,11 @@ clasificar todas las $(k,g)$-jaulas salvo isomorfismo, y dos
 determinar la cantidad de vértices que estas tienen.
 
 Uno de los casos más estudiados es cuando $k=3$ y en este caso ya se
-conocen (y se han clasificado) las jaulas hasta cuello $12$; sin
+conocen y se han clasificado las jaulas hasta cuello $12$; sin
 embargo si $g\geq 13$ solo se tienen cotas superiores e inferiores
 para el número de vértices que estas tienen.
 
-En la tesis de licenciatura \cite{tesis} se estudió el problemas de
+En la tesis de licenciatura cite:tesis: se estudió el problemas de
 las jaulas cúbicas de cuello par mayor o igual a ocho, presentando un
 método computacional; el cual dibuja gráficas $3$-regulares de cuello
 par, a partir de un listado de grupos; e identifica si alguna iguala o
@@ -64,7 +66,7 @@ grado seis, con la propiedad de que para todo vértice $x$ de la
 gráfica, si $A$ denota el conjunto formado por sus vértices
 adyacentes, entonces para todo $a\in A$ existe un único $b \in
 A\backslash \{a\}$ tal que $a$ y $b$ son adyacentes, la definición
-formal se encuentra en \cite{tesis}.
+formal se encuentra en cite:tesis:.
 
 El segundo nivel, dibuja la bipartita clánica, asociada a cada una de
 las gráficas de Cayley localmente $3K_2$, construidas en el paso
@@ -74,6 +76,8 @@ vértices $x$ y $y$ son adyacentes si y solo si $x$ es un vértice de la
 gráfica de Cayley y $y$ un triángulo que contenga a $x$ o viceversa.
 
   
+
+
 * Preliminares
   Cuando al principio de una conversación escuchamos la frase "El
   estudio de los algoritmos", muchos de nosotros podríamos suponer que
@@ -167,7 +171,7 @@ gráfica de Cayley y $y$ un triángulo que contenga a $x$ o viceversa.
      - Si \(f(n)=O(g(n))\) y \(h(n)\geq 0\), entonces \(f(n)h(n)=O(h(n)g(n))\).
 
        
-* Algoritmos y su implementación
+* COMMENT Algoritmos y su implementación
   
    Como se menciona en [[cite:MR2572804]]:
  \begin{center}
