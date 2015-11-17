@@ -90,6 +90,7 @@ mayores.
 
 
 * Preliminares
+  
   Cuando al principio de una conversación escuchamos la frase "El
   estudio de los algoritmos", muchos de nosotros podríamos suponer que
   el tema centrar de la charla estará relacionado a una computadora;
@@ -121,7 +122,7 @@ mayores.
 
      - Entrada: :: Son los datos, proporcionados por el problema
           planteado, que requiere el siguiente paso para su
-          funcionamiento.
+          funcionamiento, también conocida como condición inicial.
      - Proceso: :: Este es el momento en el que se toman los datos de
           entrada y se manipulan de acuerdo a los pasos
           preestablecidos para procesarlos.
@@ -129,13 +130,13 @@ mayores.
 
   - *Ejemplo*: algoritmo para lavarse las manos.  
     
-     - Entrada: :: Agua, Jabón y Manos.
-     - Proceso: :: 
+     - *Entrada:*  Agua, Jabón y Manos.
+     - *Proceso:* 
        - Moja ambas manos
        - Pon jabón en una mano
        - Frota ambas manos 
        - Enjuaga las manos hasta que no tengan jabón
-     - Salida: :: Manos limpias y sin jabón
+     - *Salida:*  Manos limpias y sin jabón
 
   Algo que podría parecer obvio pero que aún no se ha mencionado es
   que sin importar el número de veces que se repita un algoritmo, si
@@ -144,16 +145,29 @@ mayores.
    
 ** Características de un buen algoritmo 
 
+ *Características de un buen algoritmo:*
+
     - Debe estar descrito en términos claros, de modo que pueda convertirse
-      en un programa para una máquina.
+      en ordenes para una máquina.
     - Debe tener una condición inicial.
     - Debe finalizar después de una cantidad finita de pasos.
     - Debe finalizar con la respuesta correcta.
-    - ¿Es rápido?
+    - Debe optimizar el tiempo de ejecución.
+
+..... Aqui supongo que debo describir a que me refiero con una
+maquina....
 
 ** La notación O
 
-    
+Para clasificar un algoritmo como bueno, una de las caracteristicas
+que hay que tomar en cuenta es si es rapido o no, pero como dicen,
+¿Qué tan rapido es rapido?
+
+Para medir la rapidez de un algoritmo se da una función $g(x)$ como cota
+superior para la cantidad de pasos que este realiza antes de dar el
+resultado final, cuando el argumento tiende a infinito. Para referirse
+a esta función se utiliza la notación $O(g(x))$.
+
 *** Definición
 
 **** Notación O
@@ -182,7 +196,7 @@ mayores.
      - Si \(f(n)=O(g(n))\) y \(h(n)\geq 0\), entonces \(f(n)h(n)=O(h(n)g(n))\).
 
        
-* Algoritmos y su implementación
+* COMMENT Algoritmos y su implementación
   
    Como se menciona en [[cite:MR2572804]]:
  \begin{center}
