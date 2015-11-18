@@ -13,6 +13,9 @@
 #+options: H:4 ':t
 
 * Introducción
+  :PROPERTIES:
+  :UNNUMBERED: t
+  :END:
 
 A continuación se expondrán las definiciones elementales necesarias para
 plantear el problema a tratar.
