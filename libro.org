@@ -24,7 +24,7 @@ son parejas no ordenadas de vértices. Dos vértices $v,w$ se dicen
 \emph{adyacentes} si $\{v,w\}\in E(G)$.
 
 Una arista $e$ se dice \emph{incidente} con un vértice $v$ si
-$v\in e$.  El \emph{grado} $\gr v$ de un vértice $v$ es la cantidad de
+$v\in e$.  El \emph{grado} de un vértice $v$ es la cantidad de
 aristas incidentes con $v$. Una gráfica $G$ es \emph{regular} si todos
 los vértices tienen el mismo grado. Si $G$ es una gráfica regular
 donde los vértices tienen grado $k$, decimos que $G$ es
@@ -199,7 +199,7 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
      mayor de una lista
 
      Demostración de porque es optimo
-
+1
 *** Propiedades
 
 **** 
