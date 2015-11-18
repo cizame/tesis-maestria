@@ -163,10 +163,10 @@ Para clasificar un algoritmo como bueno, una de las caracteristicas
 que hay que tomar en cuenta es si es rapido o no, pero como dicen,
 ¿Qué tan rapido es rapido?.
 
-Para medir la rapidez de un algoritmo se da una función $g(x)$ como cota
+Para medir la rapidez de un algoritmo se da una función $g(n)$ como cota
 superior para la cantidad de pasos que este realiza antes de dar el
 resultado final, cuando el argumento tiende a infinito. Para referirse
-a esta función se utiliza la notación $O(g(x))$.
+a esta función se utiliza la notación $O(g(n))$.
 
 La función \(g(n)\) puede ser cota no solo para uno, sino
 para varios algoritmos que pueden o no realizar la misma tarea, por lo
@@ -174,7 +174,7 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
 
 *** Definición
 
-**** TODO Notación O
+**** Notación O
 
      Decimos que \(f(n)=O(g(n))\) si existen \(M\) y \(n_{0}\) tales que
      \(|f(n)|\leq Mg(n)\) para \(n\geq n_{0}\).
@@ -188,7 +188,7 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
      \(O(f(n))=O(g(n))\) entendiendo siempre que el primer conjunto
      escrito es el más pequeño. 
 
-**** Ejemplo 1
+**** Ejemplo:
 
      Sea \(P(n)=a_{0}+a_{1}n+\cdots+a_{m}n^{m}\) un polinomio de grado
      cuando mucho \(m\). Entonces \(P(n)=O(n^{m})\). Pues:
@@ -200,32 +200,42 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
      y entonces si \(n_{0}=1\) y \(M=|a_0|+|a_1|+\cdots+|a_m|\), se
      tiene que \(|P(n)|\leq Mn^{m}\) para \(n\geq n_{0}\).
 
-**** Ejemplo 2
-     
-     Tiempo de ejecución del algoritmo para encontral el número de
-     mayor de una lista
 
-     Demostración de porque es optimo
-1
 *** Propiedades
 
 **** 
      Tenemos que:
 
-     - Si \(f(n)\in O(g(n))\) entonces \( O(f(n)) \subseteq O(g(n)) \).
-     - Para toda \(f(n)\) se tiene que \(f(n)\in O(f(n))\). 
-     - \(O(f(n)=O(g(n)))\) si y solo si \(f(n)\in O(g(n))\) y \(g(n)\in O(f(n))\). 
+     - Si \(f(n)= O(g(n))\) entonces \( O(f(n))= O(g(n)) \).
+     - Para toda \(f(n)\) se tiene que \(f(n)= O(f(n))\). 
+     - \(O(f(n)=O(g(n)))\) si y solo si \(f(n)= O(g(n))\) y \(g(n)= O(f(n))\). 
      - Si \(f(n)=O(g(n))\) y \(h(n)=O(g(n))\), entonces \(f(n)+h(n)= O(g(n))\).
      - Si \(f(n)=O(g(n))\) y \(h(n)\geq 0\), entonces \(f(n)h(n)=O(h(n)g(n))\).
-     - Si \(f(n)\in O(g(n))\) y \(g(n)\in O(h(n))\) entonces \(f(n)\in
+     - Si \(f(n)= O(g(n))\) y \(g(n)= O(h(n))\) entonces \(f(n)=
        O(h(n))\).
-     - Si \(f(n)\in O(g(n))\) y \(f(n)\in O(h(n))\) entonces \(f(n)\in
+     - Si \(f(n)= O(g(n))\) y \(f(n)= O(h(n))\) entonces \(f(n)=
        O(min(g(n),h(n)))\).
-     - Si \(f_{1}(n)\in O(g_{1}(n))\) y \(f_{2}(n)\in O(g_{2}(n))\)
-       entonces \(f_{2}(n)+f_{2}(n)\in O(max(g_{1}(n),g_{2}(n))\).
-     - Si \(f_{1}(n)\in O(g_{1}(n))\) y \(f_{2}(n)\in O(g_{2}(n))\)
-       entonces \((f_{2}(n))(f_{2}(n))\in O((g_{1}(n))(g_{2}(n))\).
+     - Si \(f_{1}(n)= O(g_{1}(n))\) y \(f_{2}(n)= O(g_{2}(n))\)
+       entonces \(f_{2}(n)+f_{2}(n)= O(max(g_{1}(n),g_{2}(n)))\).
+     - Si \(f_{1}(n)= O(g_{1}(n))\) y \(f_{2}(n)= O(g_{2}(n))\)
+       entonces \((f_{2}(n))(f_{2}(n))= O((g_{1}(n))(g_{2}(n))\).
+
+
+*** Aplicación en algoritmos
+     
+    La notación \(O\) fue introducida para medir el tiempo de
+    ejecución de un algoritmo 
+
+    Imaginemos un ecenario en el que tenemos una lista desordenada de
+    números y nuestro objetivo es encontrar el mayor de ellos, para
+    lograrlo tenemos quesegur un algoritmo que nos lleve al mayor 
+    
+     Tiempo de ejecución del algoritmo para encontrar el número mayor
+     de una lista
+
+     Demostración de porque es optimo
        
+
 * Algoritmos y su implementación
   
    Como se menciona en [[cite:MR2572804]]:
