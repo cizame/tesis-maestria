@@ -180,7 +180,8 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
      Aun que \(O(g(n))\) es un conjunto de funciones, no es común
      escribir \(f(n)\in O(g(n))\) sino \(f(n)=O(g(n))\).
      .... pongo igual ????....
-**** Ejemplo
+
+**** Ejemplo 1
 
      Sea \(P(n)=a_{0}+a_{1}n+\cdots+a_{m}n^{m}\) un polinomio de grado
      cuando mucho \(m\). Entonces \(P(n)=O(n^{m})\). Pues:
@@ -192,6 +193,12 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
      y entonces si \(n_{0}=1\) y \(M=|a_0|+|a_1|+\cdots+|a_m|\), se
      tiene que \(|P(n)|\leq Mn^{m}\) para \(n\geq n_{0}\).
 
+**** Ejemplo 2
+     
+     Tiempo de ejecución del algoritmo para encontral el número de
+     mayor de una lista
+
+     Demostración de porque es optimo
 
 *** Propiedades
 
@@ -241,6 +248,15 @@ or *(iii)* inneficient sorting algorithms are in common use. The real
 truth probably involves some of the three alternatives.
 #+END_QUOTE   
 
+*** Ordenamiento de Burbuja 
+
+**** Tiempo de ejecución
+     En \(n(n-1)\)
+
+*** Ordenamiento por torneos
+
+**** Tiempo de ejecucón
+     \(n\log n\)
 
 *** TODO Ordenamiento de una lista
 
@@ -251,6 +267,7 @@ truth probably involves some of the three alternatives.
     - Luego vimos el método de ordenamiento como un torneo de
       eliminación directa y vimos que se puede ordenar en \(n\log n\)
       pasos.
+
 ** Algoritmos de camino más corto       
 *** Búsqueda en anchura
 #+BEGIN_SRC python
