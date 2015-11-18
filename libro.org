@@ -177,6 +177,10 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
      Decimos que \(f(n)=O(g(n))\) si existen \(M,n_{0}\) tales que
      \(|f(n)|\leq Mg(n)\) para \(n\geq n_{0}\).
 
+     Aun que \(O(g(n))\) es un conjunto de funciones, no es común
+     escribir \(f(n)\in O(g(n))\) sino \(f(n)=O(g(n))\).
+
+
 **** Ejemplo
 
      Sea \(P(n)=a_{0}+a_{1}n+\cdots+a_{m}n^{m}\) un polinomio de grado
