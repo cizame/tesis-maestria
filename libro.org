@@ -14,8 +14,6 @@
 
 * Introducción
 
-
-
 A continuación se expondrán las definiciones elementales necesarias para
 plantear el problema a tratar.
 
@@ -168,6 +166,10 @@ superior para la cantidad de pasos que este realiza antes de dar el
 resultado final, cuando el argumento tiende a infinito. Para referirse
 a esta función se utiliza la notación $O(g(x))$.
 
+Esta función \(g(n)\) puede ser cota no solo para uno, sino
+para varios algoritmos que pueden o no realizar la misma tarea, por lo
+que \(O(g(n))\) es en realidad un conjunto de funciones.
+
 *** Definición
 
 **** Notación O
@@ -196,7 +198,7 @@ a esta función se utiliza la notación $O(g(x))$.
      - Si \(f(n)=O(g(n))\) y \(h(n)\geq 0\), entonces \(f(n)h(n)=O(h(n)g(n))\).
 
        
-* COMMENT Algoritmos y su implementación
+* Algoritmos y su implementación
   
    Como se menciona en [[cite:MR2572804]]:
  \begin{center}

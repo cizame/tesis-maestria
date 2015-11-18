@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.23)  17 NOV 2015 15:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.2.23)  17 NOV 2015 18:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -634,18 +634,18 @@ LaTeX Info: Redefining \% on input line 27.
 ]
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 35.
+(Font)              <12> on input line 33.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 35.
+(Font)              <8> on input line 33.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 35.
+(Font)              <6> on input line 33.
 ! Undefined control sequence.
-l.42 \(v\in e\).  El \emph{grado} \(\gr
+l.40 \(v\in e\).  El \emph{grado} \(\gr
                                         v\) de un vértice \(v\) es la canti...
 
 ? 
 ! Emergency stop.
-l.42 \(v\in e\).  El \emph{grado} \(\gr
+l.40 \(v\in e\).  El \emph{grado} \(\gr
                                         v\) de un vértice \(v\) es la canti...
 End of file on the terminal!
 
