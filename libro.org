@@ -128,15 +128,15 @@ mayores.
           preestablecidos para procesarlos.
      - Salida: :: Resultado final arrojado por el proceso. 
 
-  - *Ejemplo*: algoritmo para lavarse las manos.  
+  - *Ejemplo*: Algoritmo para lavarse las manos.  
     
-     - *Entrada:*  Agua, Jabón y Manos.
+     - *Entrada:*  Agua, jabón y manos.
      - *Proceso:* 
        - Moja ambas manos
        - Pon jabón en una mano
        - Frota ambas manos 
-       - Enjuaga las manos hasta que no tengan jabón
-     - *Salida:*  Manos limpias y sin jabón
+       - Enjuaga las manos hasta que no tengan jabón.
+     - *Salida:*  Manos limpias y sin jabón.
 
   Algo que podría parecer obvio pero que aún no se ha mencionado es
   que sin importar el número de veces que se repita un algoritmo, si
@@ -161,14 +161,14 @@ maquina....
 
 Para clasificar un algoritmo como bueno, una de las caracteristicas
 que hay que tomar en cuenta es si es rapido o no, pero como dicen,
-¿Qué tan rapido es rapido?
+¿Qué tan rapido es rapido?.
 
 Para medir la rapidez de un algoritmo se da una función $g(x)$ como cota
 superior para la cantidad de pasos que este realiza antes de dar el
 resultado final, cuando el argumento tiende a infinito. Para referirse
 a esta función se utiliza la notación $O(g(x))$.
 
-Esta función \(g(n)\) puede ser cota no solo para uno, sino
+La función \(g(n)\) puede ser cota no solo para uno, sino
 para varios algoritmos que pueden o no realizar la misma tarea, por lo
 que \(O(g(n))\) es en realidad un conjunto de funciones.
 
@@ -176,12 +176,17 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
 
 **** TODO Notación O
 
-     Decimos que \(f(n)=O(g(n))\) si existen \(M,n_{0}\) tales que
+     Decimos que \(f(n)=O(g(n))\) si existen \(M\) y \(n_{0}\) tales que
      \(|f(n)|\leq Mg(n)\) para \(n\geq n_{0}\).
 
-     Aun que \(O(g(n))\) es un conjunto de funciones, no es común
-     escribir \(f(n)\in O(g(n))\) sino \(f(n)=O(g(n))\).
-     .... pongo igual ????....
+     A pesar de que \(O(g(n))\) es un conjunto de funciones, no es común
+     escribir \(f(n)\in O(g(n))\) sino \(f(n)=O(g(n))\) para dar a
+     entender que \(g(n)\) es una función que acota a \(f(n)\). En el
+     caso de comparar dos conjuntos \(O(f(n))\) y \(O(g(n))\) susede
+     algo similar, si lo que se requiere es manifestar que \(O(f(n))\)
+     es un subconjunto de \(O(g(n))\) comunmente se escribe
+     \(O(f(n))=O(g(n))\) entendiendo siempre que el primer conjunto
+     escrito es el más pequeño. 
 
 **** Ejemplo 1
 
