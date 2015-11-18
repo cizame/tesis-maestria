@@ -172,15 +172,14 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
 
 *** Definición
 
-**** Notación O
+**** TODO Notación O
 
      Decimos que \(f(n)=O(g(n))\) si existen \(M,n_{0}\) tales que
      \(|f(n)|\leq Mg(n)\) para \(n\geq n_{0}\).
 
      Aun que \(O(g(n))\) es un conjunto de funciones, no es común
      escribir \(f(n)\in O(g(n))\) sino \(f(n)=O(g(n))\).
-
-
+     .... pongo igual ????....
 **** Ejemplo
 
      Sea \(P(n)=a_{0}+a_{1}n+\cdots+a_{m}n^{m}\) un polinomio de grado
@@ -193,14 +192,25 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
      y entonces si \(n_{0}=1\) y \(M=|a_0|+|a_1|+\cdots+|a_m|\), se
      tiene que \(|P(n)|\leq Mn^{m}\) para \(n\geq n_{0}\).
 
+
 *** Propiedades
 
 **** 
      Tenemos que:
 
-     - Si \(f(n)=O(g(n))\) y \(h(n)=O(g(n))\), entonces \(f(n)+h(n)\in O(g(n))\).
+     - Si \(f(n)\in O(g(n))\) entonces \( O(f(n)) \subseteq O(g(n)) \).
+     - Para toda \(f(n)\) se tiene que \(f(n)\in O(f(n))\). 
+     - \(O(f(n)=O(g(n)))\) si y solo si \(f(n)\in O(g(n))\) y \(g(n)\in O(f(n))\). 
+     - Si \(f(n)=O(g(n))\) y \(h(n)=O(g(n))\), entonces \(f(n)+h(n)= O(g(n))\).
      - Si \(f(n)=O(g(n))\) y \(h(n)\geq 0\), entonces \(f(n)h(n)=O(h(n)g(n))\).
-
+     - Si \(f(n)\in O(g(n))\) y \(g(n)\in O(h(n))\) entonces \(f(n)\in
+       O(h(n))\).
+     - Si \(f(n)\in O(g(n))\) y \(f(n)\in O(h(n))\) entonces \(f(n)\in
+       O(min(g(n),h(n)))\).
+     - Si \(f_{1}(n)\in O(g_{1}(n))\) y \(f_{2}(n)\in O(g_{2}(n))\)
+       entonces \(f_{2}(n)+f_{2}(n)\in O(max(g_{1}(n),g_{2}(n))\).
+     - Si \(f_{1}(n)\in O(g_{1}(n))\) y \(f_{2}(n)\in O(g_{2}(n))\)
+       entonces \((f_{2}(n))(f_{2}(n))\in O((g_{1}(n))(g_{2}(n))\).
        
 * Algoritmos y su implementación
   
