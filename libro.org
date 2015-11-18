@@ -224,15 +224,40 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
 *** Aplicación en algoritmos
      
     La notación \(O\) fue introducida para medir el tiempo de
-    ejecución de un algoritmo 
+    ejecución de un algoritmo, para hacerlo primero hay que llegar a
+    la convencion de que una unidad de tiempo es igual a un paso
+    ejecutado en el algoritmo; es decir si el algoritmo realiza tres
+    pasos entonces el tiempo de ejecucion es igual a tres. 
 
-    Imaginemos un ecenario en el que tenemos una lista desordenada de
-    números y nuestro objetivo es encontrar el mayor de ellos, para
-    lograrlo tenemos quesegur un algoritmo que nos lleve al mayor 
+    Imaginemos un ecenario en el que tenemos una lista desordenada de \(n\)
+    números y nuestro objetivo es encontrar el mayor de ellos; para
+    lograrlo tenemos que seguir un algoritmo que nos lleve al mayor. 
     
+**** Algotirmo para encontrar el número mayor de una lista
+     
+     - Entrada: Lista de \(n\) números.
+     - Proceso: 
+       - Toma el primero de la lista.
+       - Comparalo con el siguiente y quedate con el mayor.
+       - Repite el punto anterior hasta que no haya más números en la lista.
+     - Salida: Número mayor de la lista.
+
+****     
+     El proceso descrito anteriormente tiene el objetivo de encontrar
+     el número mayor, esta descrito como ordenes que se pueden seguir,
+     tiene una condición inicial y termina cuando todos los números de la
+     lista ya han sido recorridos. Para poder clasificarlo como buen
+     algoritmo falta demostrar que se cumplen dos cosas: uno, termina con
+     la respuesta correcta y dos, otimaza el tiempo de ejecución.
+
+***** Termina con la respuesta correcta. 
+      
+***** Optimiza el tiempo de ejecución.
+
      Tiempo de ejecución del algoritmo para encontrar el número mayor
      de una lista
 
+**** 
      Demostración de porque es optimo
        
 
