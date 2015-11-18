@@ -225,20 +225,20 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
      
     La notación \(O\) fue introducida para medir el tiempo de
     ejecución de un algoritmo, para hacerlo primero hay que llegar a
-    la convencion de que una unidad de tiempo es igual a un paso
+    la convención de que una unidad de tiempo es igual a un paso
     ejecutado en el algoritmo; es decir si el algoritmo realiza tres
-    pasos entonces el tiempo de ejecucion es igual a tres. 
+    pasos entonces el tiempo de ejecución es igual a tres. 
 
-    Imaginemos un ecenario en el que tenemos una lista desordenada de \(n\)
+    Imaginemos un escenario en el que tenemos una lista desordenada de \(n\)
     números y nuestro objetivo es encontrar el mayor de ellos; para
     lograrlo tenemos que seguir un algoritmo que nos lleve al mayor. 
     
-**** Algotirmo para encontrar el número mayor de una lista
+**** Algoritmo para encontrar el número mayor de una lista
      
      - Entrada: Lista de \(n\) números.
      - Proceso: 
        - Toma el primero de la lista.
-       - Comparalo con el siguiente y quedate con el mayor.
+       - Compáralo con el siguiente y quédate con el mayor.
        - Repite el punto anterior hasta que no haya más números en la lista.
      - Salida: Número mayor de la lista.
 
@@ -248,9 +248,22 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
      tiene una condición inicial y termina cuando todos los números de la
      lista ya han sido recorridos. Para poder clasificarlo como buen
      algoritmo falta demostrar que se cumplen dos cosas: uno, termina con
-     la respuesta correcta y dos, otimaza el tiempo de ejecución.
+     la respuesta correcta y dos, optimiza el tiempo de ejecución.
 
 ***** Termina con la respuesta correcta. 
+      Imaginemos que el número mayor de la lista está en la posición
+      \(i\). Al llegar a este momento el número que teníamos va a ser
+      cambiado por el de la posición \(i\) pues por hipótesis ahí se
+      encuentra el mayor.
+
+      Sin embargo el algoritmo no necesariamente termina en este
+      momento, pues puede que aún haya más números en la lista que no
+      han sido comparadas. En cada comparación siguiente el número que
+      tenemos como "mayor" no se va a modificar pues por hipótesis es
+      mayor que todos.
+      
+      Por lo tanto el número reportado al final es en efecto el mayor
+      de la lista, por lo que el algoritmo termina con la respuesta correcta.
       
 ***** Optimiza el tiempo de ejecución.
 
@@ -258,7 +271,7 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
      de una lista
 
 **** 
-     Demostración de porque es optimo
+     Demostración de porque es óptimo
        
 
 * Algoritmos y su implementación
