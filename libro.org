@@ -379,24 +379,37 @@ def Burbuja(L):
      con sumar las comparaciones de cada secuencia, es decir: 
 \begin{align*}
   f(n)&=(n-1)+(n-2)+\dots + 2 + 1 \\
-      &= \frac{n(n-1)}{2} =\frac{n^{2}+n}{2}
+      &= \frac{n(n-1)}{2} =\frac{n^{2}-n}{2}
 \end{align*}
 
+    Por lo tanto \(f(n)=O(n^{2})\) por lo que el algoritmo de
+    de burbuja de orden cuadratico.
+ 
+*** Ordenamiento por torneos (debo poner figuras)
     
-*** Ordenamiento por torneos
+    Otro metodo para ordenar listas de mayor a menor es el de
+    tornenos tambien conocido como de árbol binario, que de hecho es
+    más rapido que el de burbuja, pero eso lo veremos más adelante.
+
+    Para simplificar un poco la explicación de como funciona el
+    algoritmo supongamos que la lista a ordenar tiene tamaño
+    \(n=2^{k}\).
+
+**** TODO Algoritmo:
+    - Se forma un árbol binario que en la base tenga \(2^{k}\)
+      vértices los cuales correspomden a cada valor de la lista dada.
+    - Se trabaja de izquierda a derecha para crear un padre de cada
+      par, el cual será el mayor de ambos.
+    - Se sigue el mismo proceso en cada nivel, para asignar un valor a
+      cada vértice, al llegar a la raiz se habrá determinado el valor
+      máximo.
+    - Para determinar el segundo valor más grande..... 
+
+**** Implementación del algoritmo en /python/
+
 
 **** Tiempo de ejecucón
      \(n\log n\)
-
-*** TODO Ordenamiento de una lista
-
-    - Primero encontramos el máximo de una lista de \(n\) elementos en
-      \(n-1\) pasos y demostramos que es óptimo.
-    - Por lo tanto una lista de \(n\) elementos se puede ordenar en
-      \(n(n-1)\) pasos.
-    - Luego vimos el método de ordenamiento como un torneo de
-      eliminación directa y vimos que se puede ordenar en \(n\log n\)
-      pasos.
 
 ** Algoritmos de camino más corto 
 *** Búsqueda en anchura
