@@ -259,7 +259,7 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
 
       Sin embargo el algoritmo no necesariamente termina en este
       momento, pues puede que aún haya más números en la lista que no
-      han sido comparadas. En cada comparación siguiente el número que
+      han sido comparados. En cada comparación siguiente el número que
       tenemos como "mayor" no se va a modificar pues por hipótesis es
       mayor que todos.
       
@@ -284,9 +284,6 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
       menos una vez para ser comparado con un posible "máximo", de lo
       contrario no se puede estar seguro que el número es en realidad
       el mayor de todos.
- 
-**** 
-     Demostración de porque es óptimo
        
 
 * Algoritmos y su implementación
@@ -299,13 +296,13 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
  \end{center}  
 
    Si bien ya mencionamos que un algoritmo no necesita de una
-   computadora para su existencia, en muchos caso, el tener una a la mano
+   computadora para su existencia, en muchos casos, el tener una a la mano
    es de gran ayuda a la hora de implementarlos pues el tiempo en el
    que se obtiene la solución es considerablemente menos.  
 
 ** Algoritmos de ordenamiento
 
-*** Cita de Knuth 
+**** Cita de Knuth 
    
 #+BEGIN_QUOTE
 Computer manufacturers estimate that over 25 percent of the running
@@ -317,6 +314,25 @@ applications of sorting, or *(ii)* many people sort when they shouldn't,
 or *(iii)* inneficient sorting algorithms are in common use. The real
 truth probably involves some of the three alternatives.
 #+END_QUOTE   
+
+Es por eso que el tener algoritmos de ordenamoento eficientes es
+importante pues como Knuth hace referencia gran parte del tiempo
+gastado se debe problablemente al uso de algoritmos ineficientes.
+
+Si se desea ordenar una lista de \(n\) elementos de mayor a menor, una
+forma de hacerlo es enconontrar el mayor de los \(n\) lo que se hace
+en \(n-1\) pasos, y colocarlo al principio de la lista, despues
+encontrar el mayor de los \(n-1\) en \(n-2\) pasos y ponerlo en el
+segundo lugar y así susesibamente hasta los \(n-(n-2)=2\) en un solo
+paso y colocarlos al final. Por lo tanto el tiempo en el que se ordena una lista usando este
+algoritmo es: 
+\begin{align*}
+  f(n)&=(n-1)+(n-2)+\dots + 2 + 1 \\
+      &= \frac{n(n-1)}{2} =\frac{n^{2}}{2}-\frac{n}{2}
+\end{align*}
+
+Existen diversos algoritmos de ordenamiento unos más famos que otros,
+aún que eso no signifaca que sean los más eficientes.
 
 *** Ordenamiento de Burbuja 
 
@@ -338,7 +354,7 @@ truth probably involves some of the three alternatives.
       eliminación directa y vimos que se puede ordenar en \(n\log n\)
       pasos.
 
-** Algoritmos de camino más corto       
+** Algoritmos de camino más corto 
 *** Búsqueda en anchura
 #+BEGIN_SRC python
 def bfs(G, s):
