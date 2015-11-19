@@ -289,11 +289,11 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
 * Algoritmos y su implementación
   
    Como se menciona en [[cite:MR2572804]]:
- \begin{center}
+#+BEGIN_QUOTE
    ...Antes de que hubiera computadoras, había algoritmos. 
    Pero ahora que hay computadoras, incluso hay más algoritmos y 
    estos se encuentran en el corazón de la informática...
- \end{center}  
+#+END_QUOTE  
 
    Si bien ya mencionamos que un algoritmo no necesita de una
    computadora para su existencia, en muchos casos, el tener una a la mano
@@ -315,30 +315,74 @@ or *(iii)* inneficient sorting algorithms are in common use. The real
 truth probably involves some of the three alternatives.
 #+END_QUOTE   
 
-Es por eso que el tener algoritmos de ordenamoento eficientes es
+Es por eso que el tener algoritmos de ordenamiento eficientes es
 importante pues como Knuth hace referencia gran parte del tiempo
-gastado se debe problablemente al uso de algoritmos ineficientes.
+gastado se debe probablemente al uso de algoritmos ineficientes.
 
 Si se desea ordenar una lista de \(n\) elementos de mayor a menor, una
-forma de hacerlo es enconontrar el mayor de los \(n\) lo que se hace
-en \(n-1\) pasos, y colocarlo al principio de la lista, despues
+forma de hacerlo es encontrar el mayor de los \(n\) lo que se hace
+en \(n-1\) pasos, y colocarlo al principio de la lista, después
 encontrar el mayor de los \(n-1\) en \(n-2\) pasos y ponerlo en el
-segundo lugar y así susesibamente hasta los \(n-(n-2)=2\) en un solo
-paso y colocarlos al final. Por lo tanto el tiempo en el que se ordena una lista usando este
-algoritmo es: 
+segundo lugar y así sucesivamente hasta los \(n-(n-2)=2\) en un solo
+paso y colocarlos al final. Por lo tanto el tiempo en el que se ordena
+una lista usando este algoritmo es:
 \begin{align*}
   f(n)&=(n-1)+(n-2)+\dots + 2 + 1 \\
       &= \frac{n(n-1)}{2} =\frac{n^{2}}{2}-\frac{n}{2}
 \end{align*}
 
-Existen diversos algoritmos de ordenamiento unos más famos que otros,
-aún que eso no signifaca que sean los más eficientes.
+Existen diversos algoritmos de ordenamiento unos más famosos que otros,
+aún que eso no significa que sean los más eficientes.
 
 *** Ordenamiento de Burbuja 
 
-**** Tiempo de ejecución
-     En \(n(n-1)\)
+    El algoritmo de ordenamiento de burbuja es uno de los más conocidos
+    por su sencillez. Sirve para ordenar una lista de números de mayor
+    a menor o viceversa.
 
+    Consiste en de manera recursiva y ordenada comparar bloques de dos
+    elementos consecutivos e intercambiarlos en canso necesario, de
+    modo que si lo que se desea es ordenar de menor a mayor después de
+    la primer secuencia de comparaciones se tiene como resultado que
+    el elemento mayor se encuentra al final, después de la segunda
+    secuencia el segundo elemento mas grande se encuentra en el
+    penúltimo lugar, etcétera.
+
+
+**** Implementación del algoritmo
+
+     A continuación se muestra una implementación del algoritmo de
+     Burbuja para ordenar una lista de menor a mayor, escrito en el
+     lenguaje /python/.
+#+BEGIN_SRC python
+def Burbuja(L):
+    n=len(L)
+    for i in range(1, n):
+        for j in range(1,n-i):
+            if L[j]>L[j+1]:
+                L[j],L[j+1]=L[j+1],L[j]
+    return L  
+#+END_SRC
+
+**** Tiempo de ejecución
+
+     Para calcular el tiempo de ejecución del algoritmo debemos contar
+     el número de comparaciones que este hace.
+
+     En la primer secuencia, cuando \(i=1\), \(j\) puede variar desde
+     \(1\) hasta \(n-1\) es decir se hacen \(n-1\) comparaciones en el
+     primer recorrido; cuando \(i=2\) se tiene que \(j\) varia entre
+     \(1\) y \(n-2\) por lo que hay  \(n-2\) comparaciones en el
+     segundo recorrido. 
+
+     Para calcular en total de comparaciones que se realizan solo vas
+     con sumar las comparaciones de cada secuencia, es decir: 
+\begin{align*}
+  f(n)&=(n-1)+(n-2)+\dots + 2 + 1 \\
+      &= \frac{n(n-1)}{2} =\frac{n^{2}+n}{2}
+\end{align*}
+
+    
 *** Ordenamiento por torneos
 
 **** Tiempo de ejecucón
