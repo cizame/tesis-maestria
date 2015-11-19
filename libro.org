@@ -1,5 +1,5 @@
 
-#+title: Introducción 
+#+title: Gráficas localmente \(3K_{2}\) y jaulas cúbicas 
 #+author:
 #+date: 
 
@@ -188,7 +188,7 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
      \(O(f(n))=O(g(n))\) entendiendo siempre que el primer conjunto
      escrito es el más pequeño. 
 
-**** Ejemplo:
+**** Ejemplo 1:
 
      Sea \(P(n)=a_{0}+a_{1}n+\cdots+a_{m}n^{m}\) un polinomio de grado
      cuando mucho \(m\). Entonces \(P(n)=O(n^{m})\). Pues:
@@ -242,7 +242,7 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
        - Repite el punto anterior hasta que no haya más números en la lista.
      - Salida: Número mayor de la lista.
 
-****     
+**** 
      El proceso descrito anteriormente tiene el objetivo de encontrar
      el número mayor, esta descrito como ordenes que se pueden seguir,
      tiene una condición inicial y termina cuando todos los números de la
@@ -251,10 +251,11 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
      la respuesta correcta y dos, optimiza el tiempo de ejecución.
 
 ***** Termina con la respuesta correcta. 
+
       Imaginemos que el número mayor de la lista está en la posición
-      \(i\). Al llegar a este momento el número que teníamos va a ser
-      cambiado por el de la posición \(i\) pues por hipótesis ahí se
-      encuentra el mayor.
+      \(i\). Al llegar a este momento el número que teníamos como
+      "mayor" hasta ese momento va a ser cambiado por el de la
+      posición \(i\) pues por hipótesis ahí se encuentra el mayor.
 
       Sin embargo el algoritmo no necesariamente termina en este
       momento, pues puede que aún haya más números en la lista que no
@@ -267,9 +268,23 @@ que \(O(g(n))\) es en realidad un conjunto de funciones.
       
 ***** Optimiza el tiempo de ejecución.
 
-     Tiempo de ejecución del algoritmo para encontrar el número mayor
-     de una lista
+      Primero hay que calcular el tiempo que tarda el algoritmo en
+      terminar. En este caso la unidad de tiempo es la
+      comparación entre dos números, y como se hacen \(n-1\)
+      comparaciones entonces el tiempo que tarda es igual a \(n-1\).  
 
+      Usando la notación \(O\), lo anterior se describe como
+      \(f(n)=n-1\), que es el tiempo de ejecución; y por el ejemplo 1
+      se sabe que \(f(n)=O(n)\), por lo que el tiempo de ejecución es
+      lineal.
+
+      Bien podría ocurrir que exista otro algoritmo que encuentre la
+      solución más rapido, sin embargo es facil ver que \(n-1\) es el
+      tiempo optimo pues cada número debe ser tomado en cuenta al
+      menos una vez para ser comparado con un posible "máximo", de lo
+      contrario no se puede estar seguro que el número es en realidad
+      el mayor de todos.
+ 
 **** 
      Demostración de porque es óptimo
        
